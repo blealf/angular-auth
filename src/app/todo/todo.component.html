@@ -1,0 +1,21 @@
+<div class="todos">
+  <h2>TODOs</h2>
+  <app-modal>
+    <div class="delete-modal">
+      <h3>Are you sure you want to delete the item?</h3>
+        <button (click)="completeDelete()" class="delete">Yes Delete</button>
+    </div>
+  </app-modal>
+  <div class="todo-entry">
+    <input [(ngModel)]="todo.todo" type="text" (keypress)="saveTodo($event)" placeholder="Enter todo here" >
+  </div>
+  <div class="todo-container">
+    <div *ngFor="let todo of sortedTodos; let i = index" class="todo-item">
+      <div class="todo-number">{{todo.id}}</div>
+      <div class="todo-text" [class.done]="todo.done" >{{todo.todo }}</div>
+      <button class="btn edit" (click)="!todo.done ? editTodo(todo.id) : null" [disabled]="todo.done">Edit</button>
+      <button class="btn delete" (click)="deleteTodo(todo.id)">Delete</button>
+      <input type="checkbox" [checked]="todo.done" (change)="updateStatus(todo.id)" />
+    </div>
+  </div>
+</div>

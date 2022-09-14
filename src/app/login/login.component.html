@@ -1,0 +1,24 @@
+<div class="signup-form">
+  <form [formGroup]="loginForm">
+    <h2>Login</h2>
+    <div class="formControl">
+      <label for="username">Username:</label>
+      <div class="input-group">
+        <input type="text" id="username" name="username" formControlName="username" placeholder="Enter username" />
+        <small *ngIf="username?.touched && username?.invalid">Please enter your username</small>
+      </div>
+    </div>
+    <div class="formControl">
+      <label for="password">Password:</label>
+      <div class="input-group">
+        <input type="password" id="password" name="password" formControlName="password" placeholder="Enter password" />
+        <small *ngIf="password?.touched && password?.invalid">Please enter your password</small>
+      </div>
+    </div>
+    <div class="formControl">
+      <button
+      (click)="login()" [disabled]="loginForm.status === 'INVALID'">Login</button>
+    </div>
+    <!-- <p>{{ loginForm.value | json }}</p> -->
+  </form>
+</div>

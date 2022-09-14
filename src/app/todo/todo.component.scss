@@ -1,0 +1,90 @@
+.todos {
+  display: grid;
+  place-items: center;
+  h2 {
+    margin-bottom: 100px;
+  }
+}
+
+.todo-entry {
+  input {
+    height: 20px;
+    width: 200px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid teal;
+    // border-top: 1px solid teal;
+    // border-radius: 5px;
+    font-size: 18px;
+  }
+}
+
+.todo-container {
+  // background: #eeeeee;
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 200px;
+  margin-top: 10px;
+  .todo-item {
+    display: flex;
+    border-bottom: 1px solid teal;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    height: 30px;
+    transition: all 2s ease-in;
+    .todo-number {
+      background: teal;
+      color: #eee;
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    .todo-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+
+.btn {
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit {
+  margin-left: auto;
+  margin-right: 5px;
+  background: lightblue
+}
+.delete {
+  background: red;
+  color: white;
+}
+
+input[type=checkbox] {
+  background: teal;
+}
+.done {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+.delete-modal {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  .delete {
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+  }
+}
+

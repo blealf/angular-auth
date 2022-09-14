@@ -1,0 +1,6 @@
+<div *ngIf="show" class="modal">
+    <div class="modal__content">
+      <button (click)="close()" class="close">x</button>
+      <ng-content></ng-content>
+    </div>
+  </div>
