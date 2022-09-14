@@ -11,7 +11,6 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   isAuthenticated(): boolean {
-    console.log(localStorage.getItem('token'))
     return !!localStorage.getItem('token')
   }
 
